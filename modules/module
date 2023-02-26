@@ -1,0 +1,12 @@
+const currDate = new Date();
+module.exports.date = currDate;
+
+module.exports.sayHi = function (name) {
+    let hour = currDate.getHours();
+    if(hour > 16)
+        return "Добрый вечер, " + name;
+    else if(hour > 10)
+        return "Добрый день, " + name;
+    else
+        return "Доброе утро, " + name;
+}
